@@ -3,7 +3,7 @@ package stepDefinitions;
 
 import io.cucumber.java.Before;
 import java.io.IOException;
-import static stepDefinitions.StepDefs.place_id; //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
+//import static stepDefinitions.StepDefs.place_id; //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
 
 public class Hooks
 {
@@ -16,10 +16,10 @@ public class Hooks
         System.out.println("In Hooks");
 
         stepDefs dsd = new stepDefs();
-        if (place_id==null) //If problems with this, call instead using class name, i.e. StepDefs.place_id
-        {
-            //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
-        }
+//        if (place_id==null) //If problems with this, call instead using class name, i.e. StepDefs.place_id
+//        {
+//            //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
+//        }
 
     }
 
