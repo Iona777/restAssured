@@ -6,7 +6,7 @@
      Then the API call is successful with status code 200
      And "status" in the response bode is "OK"
      And "scope" in the response bode is "APP"
-     And place_Id created maps correctely to "<name>" using "getPlaceAPI"
+     And place_Id created maps correctly to "<name>" using "getPlaceAPI"
      Examples:
        |name      |language  |address             |
        |AAhouse   |English   |World Cross Centre  |

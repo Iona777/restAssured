@@ -82,8 +82,8 @@ public class stepDefs extends Utilities //Using extends here means we do not hav
         Assert.assertEquals(expecteValue, getNodeValueFromResponse(latestResponse, node));
     }
 
-    @Then("place_Id created maps correctely to {string} using {string}")
-    public void place_id_created_maps_correctely_to_using(String expectedName, String resource) throws  IOException
+    @Then("place_Id created maps correctly to {string} using {string}")
+    public void place_id_created_maps_correctly_to_using(String expectedName, String resource) throws  IOException
     {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("Check name equals: "+expectedName);

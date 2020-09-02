@@ -3,7 +3,8 @@ package stepDefinitions;
 
 import io.cucumber.java.Before;
 import java.io.IOException;
-//import static stepDefinitions.StepDefs.place_id; //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
+
+import static stepDefinitions.stepDefs.place_id;
 
 public class Hooks
 {
@@ -15,11 +16,13 @@ public class Hooks
         //Execute this only when place_Id is null
         System.out.println("In Hooks");
 
-        stepDefs dsd = new stepDefs();
-//        if (place_id==null) //If problems with this, call instead using class name, i.e. StepDefs.place_id
-//        {
-//            //WON'T WORK UNTIL WE FINISH STEPDEFINTIONS CLASS
-//        }
+        stepDefs sd = new stepDefs();
+        if (place_id==null) //If problems with this, call instead using class name, i.e. StepDefs.place_id
+        {
+            sd.we_have_a_payload_for_the_addPlaceAPI_with_and("Fred","French", "Uk");
+            sd.user_calls_with_http_request("addPlaceAPI", "POST");
+            sd.place_id_created_maps_correctly_to_using("Fred", "getPlaceAPI");
+        }
 
     }
 
