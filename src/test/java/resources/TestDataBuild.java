@@ -3,6 +3,7 @@ package resources;
 import pojo.AddPlace;
 import pojo.Location;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 //This class contains methods that are used to return test data, in this case payloads
@@ -32,9 +33,50 @@ public class TestDataBuild
         return  place;
     }
 
-    public String deletePlacePayload(String placeId)
+    public HashMap<String, Object> addPlacePayloadHashMap (String name, String language, String address)
     {
-        return "{\r\n \"place_id\": \""+placeId+"\" \r\n}";
+        HashMap<String, Object> place = new HashMap<>(); //this is a Hashmap to define data
+        HashMap<String, Object> loc = new HashMap<>(); //this is a Hashmap to define data
+        HashMap<String, Object> types = new HashMap<>(); //this is a Hashmap to define data
+
+        List<String> myList = new ArrayList<>();
+        myList.add("car park");
+        myList.add("shop");
+
+        //Using loc hashmap
+        loc.put("Lat", "-38.383494");
+        loc.put("Lng", "33.427362)");
+
+        //Using place hashmap
+        place.put("Location", loc); //Sets the location object to the loc Hashmap
+        place.put("Accuracy","50");
+        place.put("Name", name); //This is set from the input parameter
+        place.put("Phone_Number", "0113 123546" );
+        place.put("Address", address); //This is set from the input parameter
+
+
+
+        //Very difficult to use hashamp with list.
+        //place.setTypes(myList);
+
+        place.put("Website","http://google.com");
+        place.put("Language",language); //This is set from the input parameter
+
+        return  place;
+    }
+
+    public HashMap<String, Object> deletePlacePayload(String placeId)
+    {
+
+        //Using Hashmap, return HashMap<String, Object> if using this
+        HashMap<String, Object> jsonAsMap = new HashMap<>();
+        jsonAsMap.put("place_id", placeId);
+
+        return jsonAsMap;
+
+
+        //Using raw Json, return a String if using this
+        //return "{\r\n \"place_id\": \""+placeId+"\" \r\n}";
     }
     
 }
