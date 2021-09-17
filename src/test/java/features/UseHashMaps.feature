@@ -1,4 +1,4 @@
-Feature: Using Hashmaps for Validating Place APIs
+ Feature: Using Hashmaps for Validating Place APIs
 
   Scenario Outline:Verify if Place is being succcessfully added using addPlaceAPI
     Given  I set parameters
